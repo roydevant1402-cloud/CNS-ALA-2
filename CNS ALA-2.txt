@@ -1,0 +1,38 @@
+MALWARE SIMULATION REPORT
+Name: Roy Devant
+Enrollment No.: 241105060114
+Course: CNS ALA-2
+
+1. AIM
+To develop a Python-based simulator that demonstrates the conceptual behavior of Viruses, Worms, and Trojans in a safe and controlled environment.
+
+2. SAFETY BOUNDARY
+The simulator is intentionally inert. It does not create or modify files, communicate over a network, establish persistence, access credentials, encrypt data, or change the operating system. All activity is represented with in-memory Python objects.
+
+3. VIRUS BEHAVIOR
+A virus typically attaches its behavior to a host object such as a file or program and depends on execution of that host. The simulator models this using a fixed dictionary of filenames. A simulated infection marker is copied between objects, demonstrating replication without touching real files.
+
+4. WORM BEHAVIOR
+A worm can propagate independently across connected systems. The simulator represents hosts as nodes in a fixed graph and uses a queue to demonstrate controlled breadth-first propagation. No sockets, IP scanning, or network traffic are used.
+
+5. TROJAN BEHAVIOR
+A Trojan relies on disguise or social engineering: a program appears legitimate while performing an unexpected action. The simulator uses a harmless dictionary representing an installer and prints a warning when the simulated hidden behavior is triggered.
+
+6. COMPARISON
+Virus: depends on a host and demonstrates replication.
+Worm: focuses on autonomous propagation between connected nodes.
+Trojan: focuses on deception and disguised functionality.
+
+7. IMPACT
+Viruses can damage or modify host files; worms can spread rapidly and consume resources; Trojans can trick users into executing unwanted software. The actual impact depends on the malicious payload, privileges, environment, and security controls.
+
+8. RESULT
+The program successfully demonstrates three distinct malware concepts while remaining non-operational and suitable for a controlled academic demonstration.
+
+9. CONCLUSION
+The simulation shows that the main behavioral differences are replication mechanism, propagation method, and user deception. Understanding these patterns helps students recognize suspicious behavior and design defensive controls.
+
+10. SCREENSHOT FOR SUBMISSION
+Run:
+    python safe_malware_simulator.py
+Capture the terminal showing the VIRUS SIMULATION, WORM SIMULATION, TROJAN SIMULATION, and SIMULATION SUMMARY sections. The screenshot can be uploaded to the GMIU Web Portal with this report.
